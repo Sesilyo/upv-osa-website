@@ -1,0 +1,17 @@
+@import url("./tokens.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
+
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
+
+@import url("./components/cards.css");
+@import url("./components/announcements.css");
+
+@import url("./pages/home.css");
+
+body {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-base);
+    font-family: var(--font-body);
+}
