@@ -1,0 +1,52 @@
+:root {
+    /* Base colors */
+    --color-bg-base:   #efefef; /* off-white */
+    --color-text-base: #151716; /* dark-grey */
+
+
+    /* Brand & Emphasis */
+    --color-primary:  #eba726;  /* Gold */
+    --color-heading:  #921f36;  /* Crimson */
+    --color-selected: #144a41;  /* Forest Green */
+
+
+    /* Supporting tokens */
+    --color-border: rgba(0, 0, 0, 0.1);
+
+
+    /* Fonts */
+    --font-body: "Inter", system-ui, sans-serif;
+    --font-heading: "Palatino", serif;
+
+
+    /* Font sizes */
+    --font-size-base: 16px;
+    --font-size-small: 0.875rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.25rem;
+    --font-size-heading: 2rem;
+
+
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+
+
+    /* Layout */
+    --header-height: 70px;
+    --footer-height: 60px;
+    --max-width: 1200px;
+
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+
+
+    /* Shadow */
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+}

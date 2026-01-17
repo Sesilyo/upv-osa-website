@@ -1,0 +1,66 @@
+/* HERO */
+
+#hero {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    ), url("../../") center/cover;
+    color: white;
+    padding: var(--space-xl) 0;
+}
+
+
+#hero h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+
+/* QUICK LINKS */
+.quick-link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--space-md);
+}
+
+
+.quick-link-grid a {
+    background: white;
+    padding: var(--space-md);
+    text-align: center;
+    border-radius: var(--radius-nd);
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* CARD GRID (global) */
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-lg);
+}
+
+
+.card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* SECTIONS */
+section {
+    margin-bottom: var(--space-xl);
+}
+
+.more-link {
+    display: inline-block;
+    margin-top: var(--space-md);
+    font-weight: 600;
+}
