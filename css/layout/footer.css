@@ -1,0 +1,14 @@
+/* FOOTER */
+footer {
+    background-color: var(--color-heading);
+    color: white;
+}
+
+
+#inner-footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md);
+    text-align: center;
+    font-size: var(--font-size-small);
+}

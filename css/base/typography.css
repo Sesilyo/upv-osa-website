@@ -23,7 +23,3 @@ a {
     color: var(--color-selected);
     text-decoration: none;
 }
-
-a:hover {
-    text-decoration: underline;
-}

@@ -1,0 +1,123 @@
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+header.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+#inner-header {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    transition: padding 0.3s ease, gap 0.3s ease;
+}
+
+
+/* LEFT GROUP */
+#header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+
+    transition: gap 0.3s ease;
+}
+
+
+/* LOGO */
+#UPV-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+
+    transition: gap 0.3s ease;
+}
+
+#title {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    color: var(--color-heading);
+    margin-bottom: var(--space-xs);
+
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+
+#subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--color-text-base);
+
+    transition: opacity 0.25s ease, max-height 0.25s ease;
+    overflow: hidden;
+}
+
+
+/* NAV STYLING */
+#header-nav {
+    display: flex;
+    gap: var(--space-lg);
+
+    transition: margin 0.3s ease;
+}
+
+
+.header-nav-link {
+    font-size: var(--font-size-medium);
+    text-decoration: none;
+    color: var(--color-text-base);
+    padding-bottom: 0.25rem;
+}
+
+
+.header-nav-link:hover,
+.header-nav-link.active {
+    color: var(--color-selected);
+    border-bottom: 3px solid var(--color-selected);
+}
+
+
+/* SHRINK STATE */
+header.shrink #inner-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-md);
+}
+
+
+header.shrink #header-left {
+    gap: var(--space-sm);
+}
+
+header.shrink #UPV-logo {
+    width: 40px;
+    height: 40px;
+}
+
+header.shrink #title {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+header.shrink #subtitle {
+    display: none;
+}
+
+header.shrink #header-nav {
+    margin-top: 0;
+}
