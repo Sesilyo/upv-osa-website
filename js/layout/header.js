@@ -21,10 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
     
             <nav id="header-nav">
                 <a class="header-nav-link active">HOME</a>
-                <a class="header-nav-link">SERVICES</a>
+                
+                <div id="nav-dropdown">
+                    <a class="header-nav-link">SERVICES</a>
+                    
+                    <div class="dropdown-menu">
+                        <a href="#">Guidance & Counceling</a>
+                        <a href="#">Scholarship & Financial Aid</a>
+                        <a href="#">Residential Services</a>
+                        <a href="#">Student Organizations</a>
+                    </div>
+
+                </div>
+
                 <a class="header-nav-link">FACULTY & CONTACTS</a>
                 <a class="header-nav-link">ABOUT US</a>
             </nav>
+
         </div>
     `;
 

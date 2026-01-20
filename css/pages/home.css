@@ -174,7 +174,7 @@ section {
 .service-card-inner {
     display: flex;
     flex-direction: column;
-    height: 380px;
+    height: 400px;
 }
 
 
@@ -222,7 +222,6 @@ section {
 
 .service-title {
     color: white;
-    font-weight: bold;
     margin-bottom: var(--space-xs);
 }
 

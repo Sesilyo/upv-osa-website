@@ -53,14 +53,18 @@ header.hide {
     color: var(--color-heading);
     margin-bottom: var(--space-xs);
 
+    line-height: .7;
+
     transition: width 0.3s ease, height 0.3s ease;
 }
 
 
 #subtitle {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: normal;
     color: var(--color-text-base);
+
+    line-height: 1;
 
     transition: opacity 0.25s ease, max-height 0.25s ease;
     overflow: hidden;
@@ -87,7 +91,51 @@ header.hide {
 .header-nav-link:hover,
 .header-nav-link.active {
     color: var(--color-selected);
+    cursor: pointer;
+
     border-bottom: 3px solid var(--color-selected);
+}
+
+
+#nav-dropdown {
+    position: relative;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: white;
+    min-width: 220px;
+    padding: 0.5rem 0;
+
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    transform: translate(10px);
+    pointer-events: none;
+
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    color: var(--color-text-base);
+    text-decoration: none;
+}
+
+
+#nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 
