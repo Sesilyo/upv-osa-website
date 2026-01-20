@@ -116,26 +116,52 @@ section {
 
 
 /* SERVICES */
+#services-main-title {
+    padding-bottom: 20px;
+}
+
+
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
     gap: var(--space-lg);
+
+    align-items: stretch;
+
+    overflow: visible;
+}
+
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width:640px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
 .services-grid .card {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: box-shadow 0.25s ease;
 }
 
 
 .services-grid .service-card:hover .card {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
+
 
 .service-card {
     text-decoration: none;
     color: inherit;
-    transition: transform 0.25s ease;
+    height: 100%;
+    transition: transform 0.3s ease;
+    will-change: transform;
 }
 
 
@@ -145,7 +171,67 @@ section {
 }
 
 
+.service-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+}
+
+
+.service-card-img {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+
+.service-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.service-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to-top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.15),
+        transparent
+    );
+    z-index: 1;
+}
+
+
+.service-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: var(--space-md);
+    color: white;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.service-title {
+    color: white;
+    font-weight: bold;
+    margin-bottom: var(--space-xs);
+}
+
+
 .service-desc {
     margin-top: var(--space-sm);
     font-size: var(--font-size-small);
+    color: var(--colo-text-base);
+
+    flex-grow: 1;
 }
+
