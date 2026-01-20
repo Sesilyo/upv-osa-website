@@ -113,3 +113,39 @@ section {
     margin-top: var(--space-md);
     font-weight: 600;
 }
+
+
+/* SERVICES */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+}
+
+
+.services-grid .card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.services-grid .service-card:hover .card {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-card {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease;
+}
+
+
+.service-card:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+
+.service-desc {
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-small);
+}
