@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a class="header-nav-link">SERVICES</a>
                     
                     <div class="dropdown-menu">
-                        <a href="#">Guidance & Counceling</a>
-                        <a href="#">Scholarship & Financial Aid</a>
-                        <a href="#">Residential Services</a>
-                        <a href="#">Student Organizations</a>
+                        <a href="/pages/services/counseling.html">Guidance & Counceling</a>
+                        <a href="pages/services/scholarship.html">Scholarship & Financial Aid</a>
+                        <a href="pages/services/resident.html">Residential Services</a>
+                        <a href="pages/services/organizations.html">Student Organizations</a>
                     </div>
 
                 </div>
