@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
             <nav id="header-nav">
-                <a class="header-nav-link active">HOME</a>
+                <a href="/index.html" class="header-nav-link" data-nav="home">HOME</a>
                 
                 <div id="nav-dropdown">
-                    <a class="header-nav-link">SERVICES</a>
+                    <a class="header-nav-link" data-nav="services">SERVICES</a>
                     
                     <div class="dropdown-menu">
                         <a href="/pages/services/counseling.html">Guidance & Counceling</a>
@@ -34,34 +34,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 </div>
 
-                <a href="/pages/faculty-contacts.html"  class="header-nav-link">FACULTY & CONTACTS</a>
-                <a class="header-nav-link">ABOUT US</a>
+                <a href="/pages/faculty-contacts.html"  class="header-nav-link" data-nav="faculty">FACULTY & CONTACTS</a>
+                <a class="header-nav-link" data-nav="about">ABOUT US</a>
             </nav>
 
         </div>
     `;
 
 
-    const hero = document.querySelector("#hero");
+    const currentPage = document.body.dataset.page;
+    const navLinks = document.querySelectorAll(".header-nav-link");
 
-    const shrinkObserver = new IntersectionObserver(
-        ([entry]) => {
-            if (!entry.isIntersecting) {
-                siteHeader.classList.add("shrink");
-            } else {
-                siteHeader.classList.remove("shrink");
-            }
-        },
-        {
-            root: null,
-            threshold: 0.9,
+    navLinks.forEach(link => {
+        if (link.dataset.nav == currentPage) {
+            link.classList.add("active");
         }
-    );
-
-    shrinkObserver.observe(hero);
+    });
 
 
-    const observer = new IntersectionObserver(
+    const SHRINK_OFFSET = 80;
+
+    window.addEventListener("scroll", () => {
+        siteHeader.classList.toggle("shrink", window.scrollY > SHRINK_OFFSET);
+    });
+
+
+    const FOOTER_OBSERVER = new IntersectionObserver(
         ([entry]) => {
             if (entry.isIntersecting) {
                 siteHeader.classList.add("hide");
@@ -75,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             threshold: 0.1,
         }
     );
-    observer.observe(siteFooter);
+    FOOTER_OBSERVER.observe(siteFooter);
 });
 
 console.log("header - okay")
