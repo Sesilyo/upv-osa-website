@@ -102,6 +102,11 @@ header.hide {
 }
 
 
+#nav-dropdown > .header-nav-link:hover {
+    text-decoration: none;
+}
+
+
 .dropdown-menu {
     position: absolute;
     top: 100%;

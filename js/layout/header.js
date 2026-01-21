@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div id="inner-header">
             <div id="header-left">
                 <div id="logos">
-                    <img src="assets/images/logos/UPV-logo.png" alt="UPV logo" id="UPV-logo">
+                    <img src="/assets/images/logos/UPV-logo.png" alt="UPV logo" id="UPV-logo">
                 </div>
 
                 <div id="header-branding">
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     <div class="dropdown-menu">
                         <a href="/pages/services/counseling.html">Guidance & Counceling</a>
-                        <a href="pages/services/scholarship.html">Scholarship & Financial Aid</a>
-                        <a href="pages/services/resident.html">Residential Services</a>
-                        <a href="pages/services/organizations.html">Student Organizations</a>
+                        <a href="/pages/services/scholarship.html">Scholarship & Financial Aid</a>
+                        <a href="/pages/services/resident.html">Residential Services</a>
+                        <a href="/pages/services/organizations.html">Student Organizations</a>
                     </div>
 
                 </div>
 
-                <a class="header-nav-link">FACULTY & CONTACTS</a>
+                <a href="/pages/faculty-contacts.html"  class="header-nav-link">FACULTY & CONTACTS</a>
                 <a class="header-nav-link">ABOUT US</a>
             </nav>
 
