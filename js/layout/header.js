@@ -52,10 +52,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    const SHRINK_OFFSET = 80;
+    const SHRINK_ENTER = 120;
+    const SHRINK_EXIT  = 60;
+
+    let isShrink = false;
 
     window.addEventListener("scroll", () => {
-        siteHeader.classList.toggle("shrink", window.scrollY > SHRINK_OFFSET);
+        const y = window.scrollY;
+
+        if (siteHeader.classList.contains("hide")) return;
+
+        if (!isShrink && y > SHRINK_ENTER) {
+            siteHeader.classList.add("shrink");
+            isShrink = true;
+        }
+
+        if (isShrink && y < SHRINK_EXIT) {
+            siteHeader.classList.remove("shrink");
+            isShrink = false;
+        }
     });
 
 
