@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <a href="/pages/faculty-contacts.html"  class="header-nav-link" data-nav="faculty">FACULTY & CONTACTS</a>
-                <a class="header-nav-link" data-nav="about">ABOUT US</a>
+                <a href="/pages/about.html" class="header-nav-link" data-nav="about">ABOUT US</a>
             </nav>
 
         </div>
