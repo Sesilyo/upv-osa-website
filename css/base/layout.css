@@ -16,3 +16,10 @@ body {
 main {
     padding: var(--space-lg) 0;
 }
+
+
+section {
+    padding-bottom: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
