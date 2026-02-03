@@ -23,3 +23,7 @@ a {
     color: var(--color-selected);
     text-decoration: none;
 }
+
+body {
+    text-align: justify;
+}
