@@ -1,0 +1,147 @@
+/* FILENAME: global-vars.css */
+
+:root {
+    /* COLORS */
+    /* main */
+    --UP-MAROON: #7B1113;
+    --UP-GREEN:  #014421;
+    --UP-YELLOW: #F3AA2C;
+    --UP-BLACK:  #000000;
+    
+    /* supporting colors */
+    --OLIVE-GREEN:  #565422;
+    --YELLOW-GREEN: #335628;
+    --BLUE:         #132E54;
+    --RED:          #8E171A;
+    --TERRACOTA:    #B43C25;
+    --WHITE:        #FFFFFF;
+
+    /* surface & background colors */
+    --PRIMARY-BG:   #f9eaed;    /* based on maroon */
+    --SECONDARY-BG: #e0f2e0;    /* based on green */
+    --SURFACE:      #FFFFFF;    /* card & panel surfaces */ 
+    --SURFACE-WARM: #FDF6F6;    
+    --MAROON-CHARCOAL:   #211A1B;
+    --PARGRAPH-CHARCOAL: #332A2B;
+
+    /* spacings */
+    --SPACING-SM: 0.5rem;
+    --SPACING-MD: 1rem;
+    --SPACING-LG: 2rem;
+
+    /* Text colors */
+    --TEXT-PRIMARY   : #211A1B;
+    --TEXT-SECONDARY : #5a4a4b;
+    --TEXT-MUTED     : #9a8485;
+    --TEXT-ON-DARK   : #FFFFFF;
+    --TEXT-ON-DARK-MUTED : rgba(255, 255, 255, 0.60);
+
+    /* Accent / semantic */
+    --ACCENT-YELLOW  : #F3AA2C;
+    --ACCENT-MAROON  : #7B1113;
+    --ACCENT-GREEN   : #014421;
+
+    /* Border colors */
+    --BORDER-LIGHT   : rgba(123, 17, 19, 0.10);  /* maroon-tinted light border */
+    --BORDER-MEDIUM  : rgba(123, 17, 19, 0.20);
+    --BORDER-DARK    : rgba(33, 26, 27, 0.30);
+
+
+    /* typography */
+
+    /* typeface stacks */
+    --FONT-DISPLAY  : 'Playfair Display', 'Georgia', serif;
+    --FONT-IDENTITY : 'Palatino Linotype', 'Palatino', 'Book Antiqua', Georgia, serif;
+    --FONT-BODY     : 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* type scale */
+    --FS-XS   : 0.6875rem;   /*  11px */
+    --FS-SM   : 0.75rem;     /*  12px */
+    --FS-BASE : 0.875rem;    /*  14px */
+    --FS-MD   : 1rem;        /*  16px */
+    --FS-LG   : 1.125rem;    /*  18px */
+    --FS-XL   : 1.25rem;     /*  20px */
+    --FS-2XL  : 1.5rem;      /*  24px */
+    --FS-3XL  : 2rem;        /*  32px */
+    --FS-4XL  : 2.5rem;      /*  40px */
+    --FS-5XL  : 3rem;        /*  48px */
+
+    /* font weights */
+    --FW-REGULAR  : 400;
+    --FW-MEDIUM   : 500;
+    --FW-SEMIBOLD : 600;
+    --FW-BOLD     : 700;
+
+    /* line heights */
+    --LH-TIGHT   : 1.2;
+    --LH-SNUG    : 1.4;
+    --LH-BASE    : 1.6;
+    --LH-RELAXED : 1.75;
+
+    /* letter spacing */
+    --LS-TIGHT  : -0.02em;
+    --LS-NORMAL :  0;
+    --LS-WIDE   :  0.05em;
+    --LS-WIDER  :  0.08em;
+    --LS-WIDEST :  0.12em;
+
+
+    /* spacing */
+
+    --SP-1  : 0.25rem;   /*  4px */
+    --SP-2  : 0.5rem;    /*  8px */
+    --SP-3  : 0.75rem;   /* 12px */
+    --SP-4  : 1rem;      /* 16px */
+    --SP-5  : 1.25rem;   /* 20px */
+    --SP-6  : 1.5rem;    /* 24px */
+    --SP-8  : 2rem;      /* 32px */
+    --SP-10 : 2.5rem;    /* 40px */
+    --SP-12 : 3rem;      /* 48px */
+    --SP-16 : 4rem;      /* 64px */
+    --SP-20 : 5rem;      /* 80px */
+
+    /* layout-level spacing */
+    --SECTION-PADDING-Y : var(--SP-12);
+    --SECTION-PADDING-X : var(--SP-8);
+    --CONTENT-MAX-WIDTH : 1200px;
+
+
+    /* border & radius */
+
+    --RADIUS-SM : 3px;
+    --RADIUS-MD : 6px;
+    --RADIUS-LG : 10px;
+    --RADIUS-XL : 16px;
+    --RADIUS-PILL : 999px;
+
+    --BORDER-WIDTH : 0.5px;
+
+
+    /* shadows */
+
+    --SHADOW-SM :   0 1px 3px rgba(33, 26, 27, 0.06),
+                    0 1px 2px rgba(33, 26, 27, 0.04);
+
+    --SHADOW-MD :   0 4px 12px rgba(33, 26, 27, 0.08),
+                    0 2px 4px  rgba(33, 26, 27, 0.04);
+
+    --SHADOW-LG :   0 8px 24px rgba(33, 26, 27, 0.10),
+                    0 4px 8px  rgba(33, 26, 27, 0.06);
+
+
+    /* transitions */
+
+    --TRANSITION-FAST   : 120ms ease;
+    --TRANSITION-BASE   : 200ms ease;
+    --TRANSITION-SLOW   : 350ms ease;
+
+
+    
+    /* z-index scale */
+
+    --Z-BASE    :   0;
+    --Z-RAISED  :  10;
+    --Z-OVERLAY : 100;
+    --Z-HEADER  : 200;
+    --Z-MODAL   : 300;
+}

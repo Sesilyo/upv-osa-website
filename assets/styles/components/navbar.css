@@ -1,0 +1,15 @@
+/* FILENAME: navbar.css */
+
+#main-navbar {
+    display: flex;
+    flex-direction: row;
+    gap: var(--SP-6);
+}
+
+#main-navbar a {
+    color: var(--TEXT-ON-DARK);
+    font-size: var(--FS-SM);
+    font-weight: var(--FW-MEDIUM);
+    letter-spacing: var(--LS-WIDER);
+    text-decoration: none;
+}

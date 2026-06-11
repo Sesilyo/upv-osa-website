@@ -1,0 +1,167 @@
+/* FILENAME: shared.css */
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* reset & box model */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+
+/* body */
+/* +------------------------+ */
+/* +------------------------+ */
+/* +------------------------+ */
+
+body {
+    font-family: var(--FONT-BODY);
+    font-size: var(--FS-BASE);
+    font-weight: var(--FW-REGULAR);
+    line-height: var(--LH-BASE);
+    color: var(--TEXT-PRIMARY);
+    background-color: var(--PRIMARY-BG);
+    
+    -webkit-font-smoothing  : antialiased;
+    -moz-osx-font-smoothing : grayscale;
+}
+
+header {
+    background-color: var(--UP-MAROON);
+}
+
+/* headings */
+/* +------------------------+ */
+/* +------------------------+ */
+/* +------------------------+ */
+
+/* headings - 1st group */
+h1, h2, h3 {
+    font-family:    var(--FONT-DISPLAY);
+    font-weight:    var(-FW-BOLD);
+    line-height:    var(--LH-TIGHT);
+    color:          var(--TEXT-PRIMARY);
+    letter-spacing: var(--LS-TIGHT);
+}
+
+/* headings - 2nd group */
+h4, h5, h6 {
+    font-family: var(--FONT-BODY);
+    font-weight: var(-FW-SEMIBOLD);
+    line-height: var(--LH-SNUG);
+    color:       var(--TEXT-PRIMARY);
+}
+
+h1 { font-size: var(--FS-5XL); }
+h2 { font-size: var(--FS-3XL); }
+h3 { font-size: var(--FS-2XL); }
+h4 { font-size: var(--FS-XL);  }
+h5 { font-size: var(--FS-LG);  }
+h6 { font-size: var(--FS-MD);  }
+
+
+
+/* paragraph & inline text */
+/* +------------------------+ */
+/* +------------------------+ */
+/* +------------------------+ */
+
+p {
+    line-height : var(--LH-RELAXED);
+    color       : var(--TEXT-SECONDARY);
+    max-width   : 68ch;
+}
+
+/* boldface */
+strong,
+b {
+    font-weight : var(--FW-SEMIBOLD);
+    color       : var(--TEXT-PRIMARY);
+}
+
+/* emphasis */
+em,
+i {
+    font-style : italic;
+}
+
+/* small and muted */
+small {
+    font-size : var(--FS-SM);
+    color     : var(--TEXT-MUTED);
+}
+
+/* links */
+/* +------------------------+ */
+/* +------------------------+ */
+/* +------------------------+ */
+
+a {
+    color           :   var(--UP-MAROON);
+    text-decoration :   none;
+    transition      :   color var(--TRANSITION-FAST),
+                        opacity var(--TRANSITION-FAST);
+}
+
+a:hover {
+    color   : var(--RED);
+    opacity : 0.85;
+}
+
+a:focus-visible {
+    outline        : 2px solid var(--UP-MAROON);
+    outline-offset : 3px;
+    border-radius  : var(--RADIUS-SM);
+}
+
+
+/* lists */
+/* +------------------------+ */
+/* +------------------------+ */
+/* +------------------------+ */
+
+ul,
+ol {
+    padding-left : var(--SP-6);
+    color        : var(--TEXT-SECONDARY);
+    line-height  : var(--LH-RELAXED);
+}
+
+li + li {
+    margin-top : var(--SP-1);
+}
+
+ul[role="list"],
+ol[role="list"] {
+    list-style : none;
+    padding    : 0;
+}
+
+
+
+/* images & media */
+/* +------------------------+ */
+/* +------------------------+ */
+/* +------------------------+ */
+img,
+video,
+svg {
+    display    : block;
+    max-width  : 100%;
+    height     : auto;
+}
+
+img {
+    object-fit : cover;
+}
