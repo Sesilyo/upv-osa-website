@@ -34,7 +34,7 @@
 #header-univ {
     font-family: var(--FONT-IDENTITY);
     font-size: var(--FS-XL);
-    letter-spacing: var(LS-WIDER);
+    letter-spacing: var(--LS-WIDER);
     line-height: var(--LH-TIGHT);
     padding-bottom: var(--SP-2);
     border-bottom: 2px solid var(--UP-YELLOW);
@@ -58,4 +58,233 @@
     grid-column: 2;
     grid-row: 2;
     padding-top: var(--SP-3);
+}
+
+
+/* SERVICES SHOWCASE */
+/* ------------------ */
+#services-showcase {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#services-showcase .section-header {
+    max-width: var(--CONTENT-MAX-WIDTH);
+    margin: 0 auto var(--SP-8);
+    padding: var(--SP-10) var(--SP-8) 0;
+}
+
+#services-showcase h2 {
+    font-family: var(--FONT-DISPLAY);
+    font-size: var(--FS-2XL);
+    font-weight: var(--FW-BOLD);
+    color: var(--TEXT-PRIMARY);
+    line-height: var(--LH-TIGHT);
+}
+
+#services-showcase p {
+    font-size  : var(--FS-MD);
+    color      : var(--TEXT-SECONDARY);
+    margin-top : var(--SP-2);
+    max-width  : 52ch;
+}
+
+.services-showcase-grid {
+    display: flex;
+    height: 420px;
+}
+
+.service-showcase-card-wrapper {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: flex 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-showcase-card-wrapper:hover {
+    flex: 2.2;
+}
+
+.service-showcase-card-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-showcase-card-wrapper:hover img {
+    transform:  scale(1.04);
+}
+
+.service-showcase-card-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: var(--Z-RAISED);
+    background: linear-gradient(
+        to top,
+        rgba(33, 26, 27, 0.90) 0%,
+        rgba(33, 26, 27, 0.40) 45%,
+        rgba(33, 26, 27, 0.10) 100%
+    );
+
+    transition: background 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-showcase-card-wrapper:hover::before {
+    background: linear-gradient(
+        to top,
+        rgba(33, 26, 27, 0.95) 0%,
+        rgba(33, 26, 27, 0.55) 50%,
+        rgba(33, 26, 27, 0.15) 100%
+    );
+}
+
+
+.showcase-texts {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--Z-OVERLAY);
+    padding: var(--SP-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--SP-3);
+}
+
+.showcase-card-title {
+    font-family: var(--FONT-BODY);
+    font-size: var(--FS-SM);
+    font-weight: var(--FW-BOLD);
+    text-transform: uppercase;
+    letter-spacing: var(--LS-WIDEST);
+    color: var(--TEXT-ON-DARK);
+    line-height: var(--LH-SNUG);
+
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-showcase-card-wrapper:hover .showcase-card-title {
+    transform: translateY(-4px);
+}
+
+/* Vertical maroon rule above title — the recurring motif */
+.showcase-texts::before {
+    content       : "";
+    display       : block;
+    width         : 3px;
+    height        : 0;
+    background    : var(--UP-YELLOW);
+    border-radius : var(--RADIUS-SM);
+    transition    : height 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom : var(--SP-1);
+}
+
+.service-showcase-card-wrapper:hover .showcase-texts::before {
+    height : 24px;
+}
+
+.showcase-quick-desc {
+    font-size   : var(--FS-SM);
+    color       : var(--TEXT-ON-DARK-MUTED);
+    line-height : var(--LH-RELAXED);
+    max-width   : none;
+
+    /* hidden by default, revealed on hover */
+    opacity     : 0;
+    transform   : translateY(8px);
+    transition  :   opacity   500ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
+                    transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+
+    /* clamp to 3 lines so long text doesn't overflow */
+    display            : -webkit-box;
+    -webkit-line-clamp : 3;
+    -webkit-box-orient : vertical;
+    overflow           : hidden;
+}
+
+.service-showcase-card-wrapper:hover .showcase-quick-desc {
+    opacity   : 1;
+    transform : translateY(0);
+}
+
+/* Arrow hint — appears on hover */
+.showcase-arrow {
+    display        : inline-flex;
+    align-items    : center;
+    gap            : var(--SP-2);
+    font-size      : var(--FS-XS);
+    font-weight    : var(--FW-SEMIBOLD);
+    text-transform : uppercase;
+    letter-spacing : var(--LS-WIDER);
+    color          : var(--UP-YELLOW);
+
+    opacity   : 0;
+    transform : translateY(6px);
+    transition: opacity   400ms cubic-bezier(0.4, 0, 0.2, 1) 150ms,
+                transform 400ms cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+}
+
+.service-showcase-card-wrapper:hover .showcase-arrow {
+    opacity   : 1;
+    transform : translateY(0);
+}
+
+.showcase-arrow svg {
+    width        : 14px;
+    height       : 14px;
+    stroke       : var(--UP-YELLOW);
+    fill         : none;
+    stroke-width : 2;
+    transition   : transform var(--TRANSITION-BASE);
+}
+
+.service-showcase-card-wrapper:hover .showcase-arrow svg {
+    transform : translateX(3px);
+}
+
+
+.service-showcase-card-wrapper + .service-showcase-card-wrapper {
+    border-left : 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+
+@media (max-width: 900px) {
+    .services-showcase-grid {
+        height : 340px;
+    }
+
+    .showcase-quick-desc {
+        -webkit-line-clamp : 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-showcase-grid {
+        flex-direction : column;
+        height         : auto;
+    }
+
+    .service-showcase-card-wrapper {
+        height : 180px;
+        flex   : none;
+    }
+
+    .service-showcase-card-wrapper:hover {
+        flex : none;
+    }
+
+    /* on mobile show desc always since hover doesn't exist */
+    .showcase-quick-desc {
+        opacity   : 1;
+        transform : none;
+        display   : none;       /* still hidden — too cramped at 180px */
+    }
 }

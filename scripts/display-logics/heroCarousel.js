@@ -74,7 +74,7 @@ function buildCarousel() {
             </div>
         </div>
 
-        <div class="carousel-contents">
+        <div class="carousel-controls">
             <button class="carousel-arrow" id="carousel-prev" aria-label="Previous slide">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <polyline points="15 18 9 12 15 6"></polyline>
