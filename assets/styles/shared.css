@@ -70,6 +70,27 @@ h4 { font-size: var(--FS-XL);  }
 h5 { font-size: var(--FS-LG);  }
 h6 { font-size: var(--FS-MD);  }
 
+/* section headers */
+.section-header {
+    max-width: var(--CONTENT-MAX-WIDTH);
+    margin: 0 auto var(--SP-8);
+    padding: var(--SP-10) var(--SP-8) 0;
+}
+
+.section-header h2 {
+    font-family: var(--FONT-DISPLAY);
+    font-size: var(--FS-2XL);
+    font-weight: var(--FW-BOLD);
+    color: var(--TEXT-PRIMARY);
+    line-height: var(--LH-TIGHT);
+}
+
+.section-header p {
+    font-size  : var(--FS-MD);
+    color      : var(--TEXT-SECONDARY);
+    margin-top : var(--SP-2);
+    max-width  : 52ch;
+}
 
 
 /* paragraph & inline text */

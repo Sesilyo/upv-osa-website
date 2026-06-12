@@ -69,27 +69,6 @@
     overflow: hidden;
 }
 
-#services-showcase .section-header {
-    max-width: var(--CONTENT-MAX-WIDTH);
-    margin: 0 auto var(--SP-8);
-    padding: var(--SP-10) var(--SP-8) 0;
-}
-
-#services-showcase h2 {
-    font-family: var(--FONT-DISPLAY);
-    font-size: var(--FS-2XL);
-    font-weight: var(--FW-BOLD);
-    color: var(--TEXT-PRIMARY);
-    line-height: var(--LH-TIGHT);
-}
-
-#services-showcase p {
-    font-size  : var(--FS-MD);
-    color      : var(--TEXT-SECONDARY);
-    margin-top : var(--SP-2);
-    max-width  : 52ch;
-}
-
 .services-showcase-grid {
     display: flex;
     height: 420px;
