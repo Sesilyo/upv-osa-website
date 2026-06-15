@@ -1,0 +1,193 @@
+/* FILENAME: footer.css */
+
+footer {
+    background: var(--MAROON-CHARCOAL);
+}
+
+
+/* inner */
+#footer-inner {
+    max-width   : var(--CONTENT-MAX-WIDTH);
+    margin      : 0 auto;
+    padding     : var(--SP-12) var(--SP-8);
+    display     : flex;
+    align-items : flex-start;
+    gap         : var(--SP-16);
+}
+
+/* brand column */
+#footer-brand {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--SP-4);
+    flex-shrink: 0;
+    max-width: 280px;
+}
+
+#footer-seal {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
+    opacity: 0.90;
+}
+
+#footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--SP-1);
+}
+
+#footer-university {
+    font-family: var(--FONT-IDENTITY);
+    font-size: var(--FS-MD);
+    font-weight : var(--FW-REGULAR);
+    color       : var(--TEXT-ON-DARK);
+    line-height : var(--LH-TIGHT);
+    max-width   : none;
+} 
+#footer-unit {
+    font-family    : var(--FONT-BODY);
+    font-size      : var(--FS-XS);
+    font-weight    : var(--FW-SEMIBOLD);
+    color          : var(--UP-YELLOW);
+    text-transform : uppercase;
+    letter-spacing : var(--LS-WIDEST);
+    max-width      : none;
+}
+
+#footer-address {
+    margin-top  : var(--SP-3);
+    font-size   : var(--FS-SM);
+    color       : var(--TEXT-ON-DARK-MUTED);
+    line-height : var(--LH-RELAXED);
+    font-style  : normal;
+    max-width   : none;
+} 
+#footer-address a {
+    color      : var(--TEXT-ON-DARK-MUTED);
+    transition : color var(--TRANSITION-FAST);
+}
+
+#footer-address a:hover {
+    color   : var(--TEXT-ON-DARK);
+    opacity : 1;
+}
+
+
+/* nav columns */
+#footer-nav-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--SP-8);
+    flex: 1;
+}
+
+.footer-nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--SP-3);
+}
+
+.footer-nav-heading {
+    font-size      : var(--FS-XS);
+    font-weight    : var(--FW-SEMIBOLD);
+    text-transform : uppercase;
+    letter-spacing : var(--LS-WIDEST);
+    color          : var(--UP-YELLOW);
+    max-width      : none;
+    margin-bottom  : var(--SP-1);
+}
+
+.footer-nav-col ul {
+    display        : flex;
+    flex-direction : column;
+    gap            : var(--SP-2);
+    padding        : 0;
+    list-style     : none;
+}
+
+.footer-nav-col a {
+    font-size   : var(--FS-SM);
+    color       : var(--TEXT-ON-DARK-MUTED);
+    transition  : color var(--TRANSITION-FAST);
+    line-height : var(--LH-SNUG);
+}
+
+.footer-nav-col a:hover {
+    color   : var(--TEXT-ON-DARK);
+    opacity : 1;
+}
+
+
+/* bottom bar */
+
+#footer-bottom {
+    max-width       : var(--CONTENT-MAX-WIDTH);
+    margin          : 0 auto;
+    padding         : var(--SP-5) var(--SP-8);
+    border-top      : var(--BORDER-WIDTH) solid rgba(255, 255, 255, 0.08);
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    gap             : var(--SP-4);
+}
+
+#footer-copyright {
+    font-size : var(--FS-XS);
+    color     : var(--TEXT-ON-DARK-MUTED);
+}
+
+#footer-bottom-links {
+    display : flex;
+    gap     : var(--SP-5);
+}
+
+#footer-bottom-links a {
+    font-size  : var(--FS-XS);
+    color      : var(--TEXT-ON-DARK-MUTED);
+    transition : color var(--TRANSITION-FAST);
+}
+
+#footer-bottom-links a:hover {
+    color   : var(--TEXT-ON-DARK);
+    opacity : 1;
+}
+
+#footer-admin-link {
+    color : rgba(243, 170, 44, 0.35) !important;
+}
+
+#footer-admin-link:hover {
+    color : var(--UP-YELLOW) !important;
+}
+
+
+/* responsiveness */
+
+@media (max-width: 900px) {
+    #footer-inner {
+        flex-direction : column;
+        gap            : var(--SP-10);
+    }
+
+    #footer-brand {
+        max-width : none;
+    }
+
+    #footer-nav-columns {
+        width : 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer-nav-columns {
+        grid-template-columns : repeat(2, 1fr);
+    }
+
+    #footer-bottom {
+        flex-direction : column;
+        align-items    : flex-start;
+        gap            : var(--SP-3);
+    }
+}
