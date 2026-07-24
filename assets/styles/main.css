@@ -4,4 +4,5 @@
 @import "./shared.css";
 @import "./components/navbar.css";
 @import "./components/hero-carousel.css";
+@import "./components/cards.css";
 @import "./components/footer.css";

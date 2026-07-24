@@ -1,0 +1,175 @@
+/* FILENAME: cards.css */
+
+/* Announcement grid */
+.announcements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:  var(--SP-5);
+    max-width: var(--CONTENT-MAX-WIDTH);
+    margin: 0 auto;
+    padding: 0 var(--SP-8);
+}
+
+
+/* Announcement card */
+.announce-card {
+    background: var(--SURFACE);
+    border: var(--BORDER-WIDTH) solid var(--BORDER-LIGHT);
+    border-radius: var(--RADIUS-LG);
+    padding: var(--SP-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--SP-3);
+    transition: transform var(--TRANSITION-BASE),
+                box-shadow var(--TRANSITION-BASE);
+}
+
+.announce-card:hover {
+    transform: scale(1.02);
+    box-shadow: var(--SHADOW-MD);
+}
+
+.announce-tag {
+    display        : inline-block;
+    align-self     : flex-start;
+    font-size      : var(--FS-XS);
+    font-weight    : var(--FW-BOLD);
+    text-transform : uppercase;
+    letter-spacing : var(--LS-WIDEST);
+    padding        : var(--SP-1) var(--SP-3);
+    border-radius  : var(--RADIUS-SM);
+}
+
+.announce-tag-general  { background: rgba(123,17,19,0.08); color: var(--UP-MAROON); }
+.announce-tag-academic { background: rgba(1,68,33,0.08);   color: var(--UP-GREEN);  }
+.announce-tag-events   { background: rgba(243,170,44,0.18); color: #7B4A00;         }
+.announce-tag-urgent   { background: rgba(142,23,26,0.10); color: var(--RED);       }
+
+.announce-card-title {
+    font-family : var(--FONT-DISPLAY);
+    font-size   : var(--FS-MD);
+    font-weight : var(--FW-SEMIBOLD);
+    color       : var(--TEXT-PRIMARY);
+    line-height : var(--LH-SNUG);
+    max-width   : none;
+}
+
+.announce-card-date {
+    font-size      : var(--FS-XS);
+    font-weight    : var(--FW-MEDIUM);
+    color          : var(--TEXT-MUTED);
+    letter-spacing : var(--LS-WIDE);
+    max-width      : none;
+}
+
+.announce-card-excerpt {
+    font-size   : var(--FS-SM);
+    color       : var(--TEXT-SECONDARY);
+    line-height : var(--LH-RELAXED);
+    flex        : 1;
+    max-width   : none;
+
+    display            : -webkit-box;
+    -webkit-line-clamp : 3;
+    -webkit-box-orient : vertical;
+    overflow           : hidden;
+}
+
+.announce-read-more {
+    align-self     : flex-start;
+    font-size      : var(--FS-XS);
+    font-weight    : var(--FW-SEMIBOLD);
+    color          : var(--UP-MAROON);
+    text-transform : uppercase;
+    letter-spacing : var(--LS-WIDER);
+    margin-top     : auto;
+}
+
+/* News grid */
+.news-grid {
+    display               : grid;
+    grid-template-columns : repeat(3, 1fr);
+    gap                   : var(--SP-5);
+    max-width             : var(--CONTENT-MAX-WIDTH);
+    margin                : 0 auto;
+    padding               : 0 var(--SP-8);
+}
+
+
+/* News card */
+.news-card {
+    background     : var(--SURFACE);
+    border         : var(--BORDER-WIDTH) solid var(--BORDER-LIGHT);
+    border-radius  : var(--RADIUS-LG);
+    overflow       : hidden;
+    display        : flex;
+    flex-direction : column;
+    text-decoration: none;
+    transition     :    transform   var(--TRANSITION-BASE),
+                        box-shadow  var(--TRANSITION-BASE);
+}
+
+.news-card:hover {
+    transform  : scale(1.02);
+    box-shadow : var(--SHADOW-MD);
+    opacity    : 1;
+}
+
+.news-card-image {
+    width      : 100%;
+    height     : 160px;
+    object-fit : cover;
+    flex-shrink: 0;
+}
+
+.news-card-body {
+    padding        : var(--SP-4);
+    display        : flex;
+    flex-direction : column;
+    gap            : var(--SP-2);
+    flex           : 1;
+}
+
+.news-card-source {
+    font-size      : var(--FS-XS);
+    font-weight    : var(--FW-SEMIBOLD);
+    color          : var(--UP-MAROON);
+    text-transform : uppercase;
+    letter-spacing : var(--LS-WIDER);
+    max-width      : none;
+}
+
+.news-card-title {
+    font-size   : var(--FS-BASE);
+    font-weight : var(--FW-MEDIUM);
+    color       : var(--TEXT-PRIMARY);
+    line-height : var(--LH-SNUG);
+    flex        : 1;
+    max-width   : none;
+}
+
+.news-card-link-label {
+    font-size      : var(--FS-XS);
+    font-weight    : var(--FW-SEMIBOLD);
+    color          : var(--UP-MAROON);
+    text-transform : uppercase;
+    letter-spacing : var(--LS-WIDE);
+    margin-top     : auto;
+    max-width      : none;
+}
+
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .announcements-grid,
+    .news-grid {
+        grid-template-columns : repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .announcements-grid,
+    .news-grid {
+        grid-template-columns : 1fr;
+    }
+}
