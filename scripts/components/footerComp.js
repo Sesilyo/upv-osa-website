@@ -8,7 +8,7 @@ export function injectFooter() {
 
             <!-- brand column -->
             <div id="footer-brand">
-                <img    src="./assets/images/logos/UP_Visayas_Logo.svg.png"
+                <img    src="/assets/images/logos/UP_Visayas_Logo.svg.png"
                         alt="University of the Philippines Visayas seal"
                         id="footer-seal"
                 >
