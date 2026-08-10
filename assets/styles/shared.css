@@ -49,7 +49,7 @@ header {
 /* headings - 1st group */
 h1, h2, h3 {
     font-family:    var(--FONT-DISPLAY);
-    font-weight:    var(-FW-BOLD);
+    font-weight:    var(--FW-BOLD);
     line-height:    var(--LH-TIGHT);
     color:          var(--TEXT-PRIMARY);
     letter-spacing: var(--LS-TIGHT);
@@ -58,7 +58,7 @@ h1, h2, h3 {
 /* headings - 2nd group */
 h4, h5, h6 {
     font-family: var(--FONT-BODY);
-    font-weight: var(-FW-SEMIBOLD);
+    font-weight: var(--FW-SEMIBOLD);
     line-height: var(--LH-SNUG);
     color:       var(--TEXT-PRIMARY);
 }
@@ -70,26 +70,58 @@ h4 { font-size: var(--FS-XL);  }
 h5 { font-size: var(--FS-LG);  }
 h6 { font-size: var(--FS-MD);  }
 
+section {
+    padding: var(--SP-12) 0;
+}
+
 /* section headers */
 .section-header {
-    max-width: var(--CONTENT-MAX-WIDTH);
-    margin: 0 auto var(--SP-8);
-    padding: var(--SP-10) var(--SP-8) 0;
+    max-width   : var(--CONTENT-MAX-WIDTH);
+    margin      : 0 auto var(--SP-8);
+    padding     : var(--SP-10) var(--SP-8) 0;
+    display     : flex;         /* add these */
+    align-items : center;
+    gap         : var(--SP-3);
 }
 
-.section-header h2 {
-    font-family: var(--FONT-DISPLAY);
-    font-size: var(--FS-2XL);
-    font-weight: var(--FW-BOLD);
-    color: var(--TEXT-PRIMARY);
-    line-height: var(--LH-TIGHT);
+.section-rule {
+    width         : 3px;
+    height        : 1.4em;
+    background    : var(--UP-MAROON);
+    border-radius : var(--RADIUS-SM);
+    flex-shrink   : 0;
+    align-self    : center;
 }
 
-.section-header p {
-    font-size  : var(--FS-MD);
-    color      : var(--TEXT-SECONDARY);
-    margin-top : var(--SP-2);
-    max-width  : 52ch;
+.section-title {
+    font-family : var(--FONT-DISPLAY);
+    font-size   : var(--FS-2XL);
+    font-weight : var(--FW-BOLD);
+    color       : var(--TEXT-PRIMARY);
+    line-height : var(--LH-TIGHT);
+}
+
+.section-view-all {
+    margin-left    : auto;
+    font-size      : var(--FS-XS);
+    font-weight    : var(--FW-SEMIBOLD);
+    color          : var(--UP-MAROON);
+    text-transform : uppercase;
+    letter-spacing : var(--LS-WIDER);
+    text-decoration: none;
+    white-space    : nowrap;
+    transition     : opacity var(--TRANSITION-FAST);
+}
+
+.section-view-all:hover {
+    opacity : 0.70;
+}
+
+.container {
+    width     : 100%;
+    max-width : var(--CONTENT-MAX-WIDTH);
+    margin    : 0 auto;
+    padding   : 0 var(--SP-8);
 }
 
 

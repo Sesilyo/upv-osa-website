@@ -337,13 +337,6 @@
     border           : 3px solid var(--BORDER-LIGHT);
 }
 
-
-/* shared section spacing */
-.index-section {
-    padding: var(--SP-12) 0;
-}
-
-
 @media (max-width: 900px) {
     .services-showcase-grid {
         height : 340px;
