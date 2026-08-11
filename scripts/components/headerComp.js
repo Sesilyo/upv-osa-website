@@ -13,9 +13,9 @@ export function injectHeader() {
         <div class = "dropdown">
             <button class  = "dropdown-btn">FACULTY & STAFF ▾</button>
             <div class = "dropdown-content">
-                <a href = "/pages/director.html">OSA DIRECTOR</a>
-                <a href = "/pages/leadership.html">LEADERSHIP</a>
-                <a href = "/pages/units.html">UNITS</a>
+                <a href = "../pages/director.html">OSA DIRECTOR</a>
+                <a href = "../pages/leadership.html">LEADERSHIP</a>
+                <a href = "../pages/units.html">UNITS</a>
             </div>
         </div>
     </div>
